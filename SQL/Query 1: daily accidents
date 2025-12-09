@@ -1,0 +1,10 @@
+SELECT start_date,
+       COUNT(*) AS total_accidents,
+       ROUND(AVG(duration_minutes),2) AS avg_duration_min
+FROM madsc102.usaccidents_volume
+GROUP BY start_date
+ORDER BY start_date DESC
+LIMIT 100;
+
+
+https://dbc-31399bb3-3d03.cloud.databricks.com/editor/queries/2731178622796952?o=2885422529835122
