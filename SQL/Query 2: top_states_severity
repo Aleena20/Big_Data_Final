@@ -1,0 +1,12 @@
+SELECT state,
+       COUNT(*) AS accidents,
+       ROUND(AVG(severity),2) AS avg_severity,
+       ROUND(PERCENTILE(duration_minutes, 0.5),2) AS median_duration_min
+FROM madsc102.usaccidents_volume
+GROUP BY state
+HAVING COUNT(*) > 1000
+ORDER BY avg_severity DESC
+LIMIT 10;
+
+
+https://dbc-31399bb3-3d03.cloud.databricks.com/editor/queries/2731178622796953?o=2885422529835122
