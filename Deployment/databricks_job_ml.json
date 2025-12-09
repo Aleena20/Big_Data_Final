@@ -1,0 +1,15 @@
+{
+"name": "madsc102-us-accidents-ml-refresh",
+"tasks": [
+{
+"task_key": "ml_training",
+"notebook_task": {
+"notebook_path": "/Workspace/Users/aleenaclarethomas20@gmail.com/03_ml_model_optional.py"
+}
+}
+],
+"schedule": {
+"quartz_cron_expression": "0 30 3 ? * * *",
+"timezone_id": "UTC"
+}
+}
